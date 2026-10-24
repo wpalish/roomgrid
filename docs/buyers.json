@@ -37,11 +37,14 @@
       "checked_at": "2026-10-24",
       "fit_is_hypothesis": true,
       "interest_confirmed": false,
-      "outreach_sent": false,
+      "outreach_sent": true,
       "priority": "A: проверить конкретный процесс",
       "product_scenario": "Администратор заводит помещение с вместимостью и бронирует интервал. Сервер отклоняет пересечение и превышение вместимости.",
       "qualification": "Соответствие — наша гипотеза по открытым сведениям, потребность не подтверждена.",
-      "limitations": "Нет общего календаря Google, оплаты, повторяющихся броней и публичного бронирования."
+      "limitations": "Нет общего календаря Google, оплаты, повторяющихся броней и публичного бронирования.",
+      "outreach_status": "sent_verified",
+      "outreach_date": "2026-10-24",
+      "reply_received": false
     },
     {
       "company": "Atakent Park Hotel",
