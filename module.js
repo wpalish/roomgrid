@@ -51,9 +51,12 @@ const definition = {
       interval(b.start, b.end);
       const room = byId(state, "rooms", b.room);
       required(b.people <= room.capacity, "Вместимость комнаты превышена.");
+      const old = changed(before, "bookings", b.id);
       if (b.status === "booked")
         required(
-          !room.archived && !b.archived,
+          (!room.archived && !b.archived) ||
+            (Date.parse(b.end) <= Date.now() &&
+              old?.room === b.room && old.status === "booked"),
           "Для активной брони нужна действующая комната.",
         );
     }

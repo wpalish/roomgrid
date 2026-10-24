@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-25",
+  "product": "roomgrid",
+  "baseline_commit": "9133665",
+  "before_fix": "Regression failed when archiving an elapsed booked interval; a false cancellation was needed before archival.",
+  "policy": "Existing booked interval at/past end by server clock may retain archived room/booking. New bookings of archived rooms forbidden, including backdated entries. Future/ongoing archive protections unchanged. Elapsed time is not attendance.",
+  "tests": {
+    "passed": 5,
+    "failed": 0,
+    "runtime": "v24.19.0",
+    "regression": "tests/history.test.js",
+    "log": "docs/test-output.txt"
+  },
+  "browser": {
+    "seed": "Synthetic past/future rooms and bookings seeded through authenticated HTTP API.",
+    "rejection": {
+      "all_data_unchanged": true,
+      "revision": 4,
+      "audit_events": 4
+    },
+    "completed": {
+      "past_booking_and_room_archived": true,
+      "original_booked_status_retained": true,
+      "start": "2026-10-23T10:00:00+05:00",
+      "end": "2026-10-23T11:00:00+05:00",
+      "future_booking_unchanged": true,
+      "revision": 6,
+      "audit_events": 6
+    }
+  },
+  "limits": [
+    "Synthetic local checks only; no new public server hosting",
+    "UI layout/schema unchanged; no fresh whole-interface or security audit",
+    "No calendar/bank/e-signature integration or customer acceptance"
+  ]
+}

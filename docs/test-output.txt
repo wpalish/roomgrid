@@ -1,34 +1,40 @@
 TAP version 13
-# Subtest: RoomGrid: complete original workflow, calculation and rejected invalid transition
-ok 1 - RoomGrid: complete original workflow, calculation and rejected invalid transition
+# Subtest: elapsed room bookings archive without false cancellation while future reservations stay protected
+ok 1 - elapsed room bookings archive without false cancellation while future reservations stay protected
   ---
-  duration_ms: 2.542125
+  duration_ms: 11.648791
+  type: 'test'
+  ...
+# Subtest: RoomGrid: complete original workflow, calculation and rejected invalid transition
+ok 2 - RoomGrid: complete original workflow, calculation and rejected invalid transition
+  ---
+  duration_ms: 4.592791
   type: 'test'
   ...
 # Subtest: real file restart, optimistic conflict and validated restore into an empty database
-ok 2 - real file restart, optimistic conflict and validated restore into an empty database
+ok 3 - real file restart, optimistic conflict and validated restore into an empty database
   ---
-  duration_ms: 2.757834
+  duration_ms: 5.295208
   type: 'test'
   ...
 # Subtest: HTTP prevents anonymous reads and cross-origin/CSRF writes while authenticated workflow saves
-ok 3 - HTTP prevents anonymous reads and cross-origin/CSRF writes while authenticated workflow saves
+ok 4 - HTTP prevents anonymous reads and cross-origin/CSRF writes while authenticated workflow saves
   ---
-  duration_ms: 71.645083
+  duration_ms: 91.059417
   type: 'test'
   ...
 # Subtest: two products on one host use isolated session cookies and preserve both logins
-ok 4 - two products on one host use isolated session cookies and preserve both logins
+ok 5 - two products on one host use isolated session cookies and preserve both logins
   ---
-  duration_ms: 88.660125
+  duration_ms: 95.602166
   type: 'test'
   ...
-1..4
-# tests 4
+1..5
+# tests 5
 # suites 0
-# pass 4
+# pass 5
 # fail 0
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 210.479125
+# duration_ms 271.443667
