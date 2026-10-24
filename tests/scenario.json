@@ -1,0 +1,45 @@
+[
+  {
+    "collection": "rooms",
+    "as": "r",
+    "data": {
+      "name": "Учебная комната",
+      "capacity": 4
+    }
+  },
+  {
+    "collection": "bookings",
+    "data": {
+      "room": "$r",
+      "purpose": "TEST",
+      "people": 4,
+      "start": "2099-10-25T10:00:00+05:00",
+      "end": "2099-10-25T11:00:00+05:00",
+      "status": "booked"
+    }
+  },
+  {
+    "collection": "bookings",
+    "error": "пересекается",
+    "data": {
+      "room": "$r",
+      "purpose": "Overlap",
+      "people": 2,
+      "start": "2099-10-25T10:30:00+05:00",
+      "end": "2099-10-25T11:30:00+05:00",
+      "status": "booked"
+    }
+  },
+  {
+    "collection": "bookings",
+    "error": "Вместимость",
+    "data": {
+      "room": "$r",
+      "purpose": "Too many",
+      "people": 5,
+      "start": "2099-10-25T12:00:00+05:00",
+      "end": "2099-10-25T13:00:00+05:00",
+      "status": "booked"
+    }
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "name": "roomgrid",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Бронирование комнат с ограничением вместимости и проверкой пересечений во времени.",
+  "engines": {
+    "node": ">=24.15 <25"
+  },
+  "scripts": {
+    "start": "node start.js",
+    "test": "node --test tests/*.test.js"
+  }
+}
